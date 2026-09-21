@@ -18,7 +18,7 @@ An ASP.NET Core MVC application for managing Employees and Attendance records, b
 - SQL Server 
 
 ## Third-Party Libraries Used
-- Bootstrap 5 (via LibMan, included in wwwroot/lib)
-- jQuery (via LibMan, included in wwwroot/lib)
+- Bootstrap 5 
+- jQuery 
 - Microsoft.EntityFrameworkCore.SqlServer
 - Microsoft.EntityFrameworkCore.Tools
