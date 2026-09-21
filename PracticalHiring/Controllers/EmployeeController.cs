@@ -14,13 +14,13 @@ namespace PracticalHiring.Controllers
             _context = context;
         }
 
-        // GET: /Employee  -- just shows the empty page shell
+        
         public IActionResult Index()
         {
             return View();
         }
 
-        // GET: /Employee/GetEmployees  -- called by AJAX to fill the table
+        
         public IActionResult GetEmployees(string searchTerm, string department, string status, string sortColumn, string sortOrder, int page = 1)
         {
             int pageSize = 6;
@@ -71,28 +71,15 @@ namespace PracticalHiring.Controllers
             return PartialView("_EmployeeList", employees);
         }
 
-        // GET: /Employee/GetEmployeeById  -- fills the Edit modal
+        
         public IActionResult GetEmployeeById(int id)
         {
             var employee = _context.Employees.Find(id);
             return Json(employee);
         }
 
-        // POST: /Employee/Save  -- handles both Add and Edit
-        //[HttpPost]
-        //public IActionResult Save(Employee employee)
-        //{
-        //    if (employee.Id == 0)
-        //    {
-        //        _context.Employees.Add(employee);
-        //    }
-        //    else
-        //    {
-        //        _context.Employees.Update(employee);
-        //    }
-        //    _context.SaveChanges();
-        //    return Json(new { success = true });
-        //}
+
+
 
 
 
@@ -128,7 +115,7 @@ namespace PracticalHiring.Controllers
             return Json(new { success = true });
         }
 
-        // POST: /Employee/Delete
+     
         [HttpPost]
         public IActionResult Delete(int id)
         {

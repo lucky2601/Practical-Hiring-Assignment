@@ -47,24 +47,6 @@ $(document).ready(function () {
         }
     });
 
-    // $("#employeeForm").on("submit", function (e) {
-    //     e.preventDefault();
-    //     var employee = {
-    //         Id: $("#Id").val(),
-    //         Code: $("#Code").val(),
-    //         Name: $("#Name").val(),
-    //         Email: $("#Email").val(),
-    //         Department: $("#Department").val(),
-    //         Salary: $("#Salary").val(),
-    //         JoiningDate: $("#JoiningDate").val(),
-    //         IsActive: $("#IsActive").is(":checked")
-    //     };
-
-    //     $.post("/Employee/Save", employee, function () {
-    //         $("#employeeModal").modal("hide");
-    //         loadEmployees();
-    //     });
-    // });
 
 
     $("#employeeForm").on("submit", function (e) {
