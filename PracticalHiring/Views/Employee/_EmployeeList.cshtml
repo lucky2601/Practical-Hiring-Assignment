@@ -1,0 +1,40 @@
+﻿@model List<PracticalHiring.Models.Employee>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="cursor:pointer" class="sort-link" data-column="Name">Name</th>
+            <th>Code</th>
+            <th>Email</th>
+            <th style="cursor:pointer" class="sort-link" data-column="Department">Department</th>
+            <th style="cursor:pointer" class="sort-link" data-column="Salary">Salary</th>
+            <th>Joining Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Name</td>
+                <td>@emp.Code</td>
+                <td>@emp.Email</td>
+                <td>@emp.Department</td>
+                <td>@emp.Salary.ToString("N2")</td>
+                <td>@emp.JoiningDate.ToString("dd-MMM-yyyy")</td>
+                <td>@(emp.IsActive ? "Active" : "Inactive")</td>
+                <td>
+                    <button class="btn btn-sm btn-warning btnEdit" data-id="@emp.Id">Edit</button>
+                    <button class="btn btn-sm btn-danger btnDelete" data-id="@emp.Id">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    Page @ViewBag.CurrentPage of @ViewBag.TotalPages
+    <button id="btnPrevPage" class="btn btn-sm btn-outline-secondary">Previous</button>
+    <button id="btnNextPage" class="btn btn-sm btn-outline-secondary">Next</button>
+</div>

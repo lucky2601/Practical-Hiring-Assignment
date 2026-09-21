@@ -1,0 +1,32 @@
+﻿@model List<PracticalHiring.Models.Attendance>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Employee</th>
+            <th style="cursor:pointer" class="sort-link-att" data-column="Date">Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var att in Model)
+        {
+            <tr>
+                <td>@att.Employee.Name</td>
+                <td>@att.Date.ToString("dd-MMM-yyyy")</td>
+                <td>@att.Status</td>
+                <td>
+                    <button class="btn btn-sm btn-warning btnEditAtt" data-id="@att.Id">Edit</button>
+                    <button class="btn btn-sm btn-danger btnDeleteAtt" data-id="@att.Id">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    Page @ViewBag.CurrentPage of @ViewBag.TotalPages
+    <button id="btnPrevPageAtt" class="btn btn-sm btn-outline-secondary">Previous</button>
+    <button id="btnNextPageAtt" class="btn btn-sm btn-outline-secondary">Next</button>
+</div>

@@ -1,0 +1,28 @@
+﻿@model List<PracticalHiring.Models.AttendanceSummaryViewModel>
+@{
+    ViewData["Title"] = "Attendance Summary";
+}
+
+<h3>Attendance Summary by Employee</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Employee</th>
+            <th>Present</th>
+            <th>Absent</th>
+            <th>Leave</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in Model)
+        {
+            <tr>
+                <td>@row.EmployeeName</td>
+                <td>@row.PresentCount</td>
+                <td>@row.AbsentCount</td>
+                <td>@row.LeaveCount</td>
+            </tr>
+        }
+    </tbody>
+</table>
