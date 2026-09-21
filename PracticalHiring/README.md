@@ -1,4 +1,6 @@
-﻿# PracticalHiring — Employee Management System
+﻿# FarmWatt Innovations Pvt. Limited 
+
+#PracticalHiring — Employee Management System
 
 ## Overview
 An ASP.NET Core MVC application for managing Employees and Attendance records, built with Entity Framework Core (Code First), SQL Server, Bootstrap, and jQuery/AJAX.
